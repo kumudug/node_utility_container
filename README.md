@@ -19,4 +19,4 @@
 ## Using docker-compose instead of long docker run command
    - Refer to the `docker-compose.yaml`
    - Run using 
-      - `docker-compose run npm install`
+      - `docker-compose run --rm npm install`
