@@ -1,7 +1,7 @@
 # Creating a Node utility container
 
 * Build
-   - `docker build . -t node-util`
+   - `docker build . -t node-util --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g)`
 * Run 
    - When running we are gonna give he command to run
    - Add a bind mount
@@ -18,5 +18,10 @@
 
 ## Using docker-compose instead of long docker run command
    - Refer to the `docker-compose.yaml`
+   - Need `env` file
+      - To find your user id and group for env values use
+         - `id -u`, `id -g`
    - Run using 
       - `docker-compose run --rm npm install`
+      * Permission fix didn't work with docker compose
+   

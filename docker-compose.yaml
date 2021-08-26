@@ -1,8 +1,13 @@
 version: "3.9"
 services: 
     npm:
-        build: ./
+        build:
+            context: .
+            args:
+                USER_ID: 1000 # get using id -u
+                GROUP_ID: 985 # get using id -g
         stdin_open: true
         tty: true
         volumes: 
             - ./:/app
+        
