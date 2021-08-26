@@ -15,3 +15,8 @@
       `ENTRYPOINT ["npm"]`
    - Run the container without the npm part as it will be prepended
       - `docker run -it -v $(pwd):/app --rm node-util init`
+
+## Using docker-compose instead of long docker run command
+   - Refer to the `docker-compose.yaml`
+   - Run using 
+      - `docker-compose run npm install`
