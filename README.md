@@ -23,5 +23,4 @@
          - `id -u`, `id -g`
    - Run using 
       - `docker-compose run --rm npm install`
-      * Permission fix didn't work with docker compose
    
